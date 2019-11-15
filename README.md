@@ -7,4 +7,8 @@ This project aims to help you check your Kubernetes cluster(s) to ensure that al
 For example:
 - What if you changed the AWS IAM permission for your nodes to create ELBs for a `service.type: LoadBalancer`?  You won't know until the next time you need to create a load balancer.  If that breaks is in production, that is not the time you want to find out.
 - Some changes to the Kubernetes API Audit Log settings could render it to send logs to the wrong directory or not outputting logs at all.  You might not notice this type of change unless you were specifically looking for it and testing for it.
-- 
+- Testing a statefulset that spans multiple zones.  Testing end to end that the pods can spin up on nodes in different zones.  The cluster can provision EBS volumes and attach them successfully (https://www.youtube.com/watch?v=1xHmCrd8Qn8 time: 22:14).  This should work but there might be some mis-configuration which might make it not work.
+- Test external-dns is working by adding a new dns entry and checking if that DNS entry gets created and then deleted
+- Tests cert-manager is working by adding a new cert request for http01 and dns01 validation
+- Test prometheus `ServiceMonitor`, adding a service to be scraped and checking if prometheus adds it in as a target and if the metrics shows up in prometheus by querying it
+- Check that the cluster-autoscaler is working by provisioning out pods and making sure a new node is started and the pods gets provisioned
