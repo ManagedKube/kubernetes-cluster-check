@@ -13,3 +13,8 @@ For example:
 - Test prometheus `ServiceMonitor`, adding a service to be scraped and checking if prometheus adds it in as a target and if the metrics shows up in prometheus by querying it
 - Check that the cluster-autoscaler is working by provisioning out pods and making sure a new node is started and the pods gets provisioned
 - Creating a nginx-ingress controller which turns up an ELB.  Checking that the end to end path works from the ELB to the nginx to the pod
+
+This project was inspired by:
+- My own personal need as a consultant.  Clients needed a way to test out their cluster after a change.
+- This blog and kubecon talks is pretty much what this project wants to do but on a more generic level for Kops, EKS, GKE, and AKS clusters:  https://srcco.de/posts/how-zalando-manages-140-kubernetes-clusters.html
+
