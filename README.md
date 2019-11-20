@@ -39,7 +39,6 @@ You might not have the automated pipeline that they do and you might just have t
 
 
 
-![the workflow](/images/images/draw.io/kubernetes-automated-deployment.png)
-
+![the workflow](/images/draw.io/kubernetes-automated-deployment.png)
 
 
