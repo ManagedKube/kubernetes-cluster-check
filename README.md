@@ -35,9 +35,7 @@ If your application is able to handle nodes restarting and shuffling the pods ar
 You might not have the automated pipeline that they do and you might just have the tests where you can run it manually at first but by just having the tests will give you confidence that the rollout is happening correctly and that the tests are passing.  Then you start to rollout cluster changes faster.  Instead of taking days or weeks, you can do a bunch of them in parallel and maybe do them in a few hours or a day. 
 
 
-
-
-
+# The Workflow
 
 ![the workflow](/images/draw.io/kubernetes-automated-deployment.png)
 
